@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    
+    section{
+        height: 100%;
+        width: 100px;
+        flex-grow: 1;
+        background-color: seagreen;
+        transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+        
+
+    }
+    section:hover{
+        flex-grow: 3;
+    }
+    section:nth-child(1){
+        background-image: url(https://media.istockphoto.com/id/1342280634/photo/goddess-durga-idol-decorated-at-puja-pandal-in-kolkata-west-bengal-india-durga-puja-is.webp?a=1&b=1&s=612x612&w=0&k=20&c=2UsHYAzDTHUMfhYdyZcR38GzjqGYXlVMQswusblkIPE=);
+        background-size: cover;
+        background-position: center;
+    } 
+    section:nth-child(2){
+        background-image: url(https://images.unsplash.com/photo-1730379267609-ac62920ef972?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWFhJTIwa2FsaXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600);
+        background-size: cover;
+        background-position: center;
+    } 
+     section:nth-child(3){
+        background-image: url(https://media.istockphoto.com/id/1392117973/photo/back-lit-statue-of-hindu-god-lord-shiva-in-meditation-posture-with-dramatic-sky-from-unique.webp?a=1&b=1&s=612x612&w=0&k=20&c=HWXfkifjUUuYW3VdSfX7cVuN8JTlQovFE3NOoQJdh1M=);
+        background-size: cover;
+        background-position: center;
+    } 
+     section:nth-child(4){
+        background-image: url(https://images.unsplash.com/photo-1607604760190-ec9ccc12156e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1haGFkZXZ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600);
+        background-size: cover;
+        background-position: center;
+    } 
+     section:nth-child(5){
+        background-image: url(https://media.istockphoto.com/id/1290875664/photo/worship-of-jagadhatri-puja-at-chandannagar.webp?a=1&b=1&s=612x612&w=0&k=20&c=i4RXo1RjfFyHdZoCunYOX7l6TrF-hZ52hrb81NbO21E=);
+        background-size: cover;
+        background-position: center;
+    } 
+}
