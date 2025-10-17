@@ -56,7 +56,7 @@ body {
 #main section.view1 .bottom .text h1 {
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 #main section.view1 .bottom .text p {
   opacity: 0.5;
@@ -81,13 +81,12 @@ body {
   gap: 1rem;
   width: 100%;
   padding: 1rem;
-  flex-direction: row;
-  justify-content: space-around;
+  display: flex;
 }
 #main section.view2 .top, #main section.view2 .bottom {
+  display: flex;
   width: 100%;
-  display: felx;
-  flex-direction: row;
+  justify-content: space-around;
 }
 
 @media (min-width: 768px) {
@@ -103,9 +102,5 @@ body {
   }
   #main section.view1 .bottom .text p {
     font-size: 1rem;
-  }
-  #main section.view2 {
-    display: flex;
-    flex-direction: row;
   }
 }/*# sourceMappingURL=style.css.map */

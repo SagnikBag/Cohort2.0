@@ -57,7 +57,7 @@ body{
             h1{
                 font-weight: 400;
                 text-transform: uppercase;
-                font-size: 2.5rem;
+                font-size: 1.5rem;
             }
             p{
                 opacity: 0.5;
@@ -79,21 +79,21 @@ body{
             
         }
     }
-  section.view2{
-         @include flex-column(1rem);
+
+    section.view2{
+       
+        @include flex-column(1rem);
          width: 100%;
         padding: 1rem;
-        flex-direction: row;
-        justify-content: space-around;
+        display: flex;
        
-    .top, .bottom{
-        width: 100%;
-        display: felx;
-        flex-direction: row;
        
+        .top, .bottom{
+         display: flex;
+         width: 100%;
+         justify-content: space-around;
+        }
     }
-    
-  }
 }
 
 @media (min-width:768px){
@@ -118,10 +118,7 @@ body{
         }
             
         }
-        section.view2{
-           display: flex;
-           flex-direction: row;
-        }
+        
     }
 }
     
