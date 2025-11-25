@@ -1,0 +1,99 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body, html {
+ height: 100%;
+ width: 100%;
+}
+
+main{
+ height: 100%;
+ width: 100%;
+ background: linear-gradient(to right bottom,rgb(34,56,78),rgb(54,43,32));
+ padding-top: 10px;
+ 
+}
+section{
+ height: 90%;
+ width: 300px;
+ background-color: black;
+ margin: auto;
+ border-radius: 10px;
+
+ 
+ 
+}
+.allReels{
+ height: 100%;
+ width: 100%;
+ background-color: aliceblue;
+ border-radius: 10px;
+ 
+
+}
+.reel{
+ height: 100%;
+ width: 100%;
+ 
+ position: relative;
+
+}
+.reel img{
+ height: 100%;
+ width: 100%;
+ object-fit: cover;
+
+}
+.reel .bottom{
+ padding: 30px 20px;
+ width: 100%;
+background: linear-gradient(rgba(0, 0, 0, 0.065),rgba(0, 0, 0, 0.335));
+position: absolute;
+color: aliceblue;
+bottom: 0px;
+
+}
+.bottom .user{
+ display: flex;
+ align-items: center;
+ color: aliceblue;
+ gap: 10px;
+ margin-bottom: 10px;
+}
+.bottom .user img{
+ width: 25px;
+ height: 25px;
+ border-radius: 50%;
+ object-fit: cover;
+}
+.bottom h3{
+ font-weight: 400;
+ font-size: 20px;
+}
+.bottom button{
+ padding: 2px 4px;
+ background: transparent;
+ color: aliceblue;
+ font-size: 10px;
+ border-radius: 2px;
+ border: 1px solid black;
+}
+.right{
+ padding: 20px;
+ display: flex;
+ flex-direction: column;
+ gap:10px;
+ text-align:center ;
+ width: 40px;
+ position: absolute;
+ right: 0;
+ bottom: 0;
+ transform: translateX(100%);
+}
+.right i{
+ font-size: 25px;
+ font-weight: 500;
+}
