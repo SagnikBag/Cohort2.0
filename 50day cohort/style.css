@@ -105,6 +105,7 @@ bottom: 0;
  right: 0;
  bottom: 12%;
  color: white;
+ 
  /* transform: translateX(-1%); */
 }
 .right i{
@@ -121,7 +122,16 @@ bottom: 0;
  flex-direction: column;
  justify-content: center;
  align-items: center;
+ 
+ cursor: pointer;
 }
 .love{
 color: red;
 }
+.right>div h6{
+ pointer-events: none;
+}
+.right>div h4{
+ pointer-events: none;
+}
+

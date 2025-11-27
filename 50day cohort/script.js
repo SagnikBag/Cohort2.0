@@ -141,8 +141,12 @@ const posts = [
 }
 ];
 
-let sum = ""
-posts.forEach(function(elem){
+var allReels = document.querySelector(".allReels") 
+
+
+function addData(){
+  let sum = ""
+posts.forEach(function(elem,idx){
 sum += `    <div class="reel">
 <video autoplay loop muted src="${elem.video}"></video>
 <div class="bottom">
@@ -154,7 +158,7 @@ sum += `    <div class="reel">
 <h3>${elem.caption}</h3>
 </div>
 <div class="right">
- <div class="like">
+ <div id= ${idx} class="like">
   <h4 class="like-icon">${elem.isLiked? '<i class="love ri-heart-fill"></i>':'<i class="ri-heart-line"></i>'}</h4>
   <h6>${elem.likeCount}</h6>
  </div>
@@ -174,13 +178,12 @@ sum += `    <div class="reel">
 </div>`
  
 })
-var allReels = document.querySelector(".allReels") 
 allReels.innerHTML = sum;
 
 }
 addData()
 
-allReels.addEventListener("click",function(){
-  console.log("hllo");
+allReels.addEventListener("click",function(hllo){
+  console.log(hllo.target.id);
   
 })
