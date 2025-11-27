@@ -183,7 +183,15 @@ allReels.innerHTML = sum;
 }
 addData()
 
-allReels.addEventListener("click",function(hllo){
-  console.log(hllo.target.id);
+allReels.addEventListener("click",function(dets){
+if(!posts[dets.target.id].isLiked){
+  posts[dets.target.id].likeCount++
+  posts[dets.target.id].isLiked = true
+
+}else{
+  posts[dets.target.id].likeCount--
+  posts[dets.target.id].isLiked = false
+}
+addData()
   
 })
