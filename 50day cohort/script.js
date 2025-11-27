@@ -176,3 +176,11 @@ sum += `    <div class="reel">
 })
 var allReels = document.querySelector(".allReels") 
 allReels.innerHTML = sum;
+
+}
+addData()
+
+allReels.addEventListener("click",function(){
+  console.log("hllo");
+  
+})
