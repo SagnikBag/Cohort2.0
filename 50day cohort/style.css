@@ -134,4 +134,26 @@ color: red;
 .right>div h4{
  pointer-events: none;
 }
-
+.right .follow{
+ cursor: pointer;
+}
+.mute{
+ background-color: #333;
+ height: 40px;
+ width: 40px;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ position: absolute;
+ cursor: pointer;
+ top: 10px;
+right: 10px;
+}
+.mute i {
+ font-size: 24px;
+ pointer-events: none;
+}
+.mute:active{
+ scale: 0.95;
+}
