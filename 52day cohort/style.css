@@ -8,6 +8,10 @@ html,body{
  width: 100%;
  background-color: black;
 }
+img{
+ height: 100%;
+ width: 100%;
+}
 
 :root{
 --x:400px;
@@ -16,6 +20,8 @@ html,body{
 .box{
  height: 100%;
  width:100%;
- background: radial-gradient(100px at var(--x) var(--y), rgba(255, 255, 255, 0.375),rgba(255, 255, 255, 0.154));
+ background: radial-gradient(150px at var(--x) var(--y), rgba(255, 255, 255, 0),black);
+ position: absolute;
+ top: 1px;
 
 }
