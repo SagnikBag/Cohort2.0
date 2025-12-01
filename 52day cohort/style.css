@@ -8,9 +8,10 @@ html,body{
  width: 100%;
  background-color: black;
 }
-img{
- height: 100%;
- width: 100%;
+video{
+ height: 100vh;
+ width: 100vw;
+ background-size: cover;
 }
 
 :root{
@@ -20,8 +21,8 @@ img{
 .box{
  height: 100%;
  width:100%;
- background: radial-gradient(150px at var(--x) var(--y), rgba(255, 255, 255, 0),black);
+ background: radial-gradient(150px at var(--x) var(--y), rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.709));
  position: absolute;
- top: 1px;
+ top: 0;
 
 }
