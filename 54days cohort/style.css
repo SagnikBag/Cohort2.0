@@ -15,6 +15,21 @@ background-color: black;
  align-items: center;
 
 }
+@property --rotate{
+ syntax: "<angle>";
+ initial-value: 0deg;
+ inherits: false;
+}
+@keyframes borderAnimation{
+ from {
+  --rotate:0deg;
+  --border:0px
+ }
+ to {
+  --rotate: 360deg;
+  --border:5px;
+ }
+}
 .box{
  max-width: 300px;
  padding-inline: 10px;
@@ -28,8 +43,18 @@ background-color: black;
  border-radius: 15px;
  background:
  linear-gradient(black )padding-box,
- conic-gradient(from 80deg,black,rgb(28, 194, 13),black) border-box;
+ conic-gradient(from var(--rotate),black,rgb(182, 13, 194),black) border-box;
  border: 5px solid rgba(255, 255, 255, 0);
+ animation: borderAnimation 10s;
+ animation-iteration-count: infinite;
+ animation-timing-function:linear;
+ animation-play-state: paused;
+}
+
+.box:hover{
+ animation-play-state: running;
+ cursor: pointer;
+ border: 5px solid pink;
 }
 .box img{
  width: 100%;
