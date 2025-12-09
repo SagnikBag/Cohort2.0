@@ -54,9 +54,10 @@ background-color: black;
 .box:hover{
  animation-play-state: running;
  cursor: pointer;
- border: 5px solid pink;
+ border: 6px solid pink;
 }
 .box img{
+
  width: 100%;
 
 }
