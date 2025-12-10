@@ -25,6 +25,6 @@ function randomText(){
 p.addEventListener("mouseover",function(){
  setInterval(function(){
   randomText()
- },100)
+ },200)
 }
 )
