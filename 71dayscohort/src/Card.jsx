@@ -1,39 +1,27 @@
 import React from 'react'
 
-const Card = (user) => {
+const Card = () => {
   return (
-   
+    <div className="bg-white rounded-2xl">
+      <div className="w-50 h-60  rounded-2xl bg-white shadow-lg p-6 hover:shadow-xl transition">
+        <img
+          src="https://via.placeholder.com/300x180"
+          alt="Card"
+          className="rounded-xl mb-4"
+        />
 
+        <h2 className="text-xl font-semibold text-gray-800 mb-2">title</h2>
 
-    <div className="w-80 bg-gray-400 rounded-lg overflow-hidden shadow-lg shadow-gray-700 cursor-pointer hover:scale-105 ease-in duration-300">
-        <img src={user.coverImg} alt="Cover" className="w-full h-32 object-cover" />
-        <div className="p-4">
-            <div className="flex items-center mb-4">
-                <img src={user.avatar} alt="Avatar" className="w-16 h-16 rounded-full border-2 border-white -mt-8" />
-                <h2 className="text-2xl font-semibold ml-4">{user.name}</h2>
-            </div>
-            <p className="text-gray-600">{user.description}</p>
-        </div>
-        <div className="bg-gray-200 p-4 flex justify-between text-center">
-            <div>
-                <h3 className="text-lg font-semibold">{user.stats.likes}</h3>
-                <p className="text-gray-600">Likes</p>
-            </div>
-            <div>
-                <h3 className="text-lg font-semibold">{user.stats.posts}</h3>
-                <p className="text-gray-600">Posts</p>
-            </div>
-            <div>
-                <h3 className="text-lg font-semibold">{user.stats.views}</h3>
-                <p className="text-gray-600">Views</p>
-            </div>
-        </div>
+        <p className="text-gray-600 text-sm mb-4">
+          This is a simple card component built using React and Tailwind CSS.
+        </p>
+
+        <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+          Learn More
+        </button>
+      </div>
     </div>
-  )
+  );
 }
-
-  
-
-
 
 export default Card
