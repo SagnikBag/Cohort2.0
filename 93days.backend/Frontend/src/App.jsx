@@ -7,7 +7,7 @@ function App() {
 
 const [notes, setNotes] = useState([]);
 function fetchNotes(){
-  axios.get("http://localhost:3000/api/notes").then((res) => {
+  axios.get("https://cohort2-0-xsn5.onrender.com/api/notes").then((res) => {
     setNotes(res.data.note);
   });
 }
@@ -22,7 +22,7 @@ function handleSubmit(e){
   const {title,description} = e.target.elements
   console.log(title.value,description.value);
   axios
-    .post("https://cohort2-0-xsn5.onrender.com//api/notes", {
+    .post("https://cohort2-0-xsn5.onrender.com/api/notes", {
       title: title.value,
       description: description.value,
     })
@@ -34,7 +34,7 @@ function handleSubmit(e){
 
 function handleDeleteNote(noteId){
 axios
-  .delete("https://cohort2-0-xsn5.onrender.com//api/notes/" + noteId)
+  .delete("https://cohort2-0-xsn5.onrender.com/api/notes/" + noteId)
   .then((res) => {
     console.log(res.data);
     fetchNotes();
