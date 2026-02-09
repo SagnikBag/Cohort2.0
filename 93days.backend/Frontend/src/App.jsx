@@ -5,24 +5,7 @@ import { useEffect } from 'react';
 
 function App() {
 
-const [notes, setNotes] = useState([
-  {
-    title: "test title1",
-    description: "test descripion1",
-  },
-  {
-    title: "test title2",
-    description: "test descripion2",
-  },
-  {
-    title: "test title3",
-    description: "test descripion3",
-  },
-  {
-    title: "test title4",
-    description: "test descripion4",
-  },
-]);
+const [notes, setNotes] = useState([]);
 function fetchNotes(){
   axios.get("http://localhost:3000/api/notes").then((res) => {
     setNotes(res.data.note);
@@ -38,22 +21,24 @@ function handleSubmit(e){
 
   const {title,description} = e.target.elements
   console.log(title.value,description.value);
-  axios.post("http://localhost:3000/api/notes",{
-    title:title.value,
-    description:description.value
-  }).then(res=>{
-    console.log(res.data);
-    fetchNotes()
-   
-  })  
+  axios
+    .post("https://cohort2-0-xsn5.onrender.com//api/notes", {
+      title: title.value,
+      description: description.value,
+    })
+    .then((res) => {
+      console.log(res.data);
+      fetchNotes();
+    });  
 }
 
 function handleDeleteNote(noteId){
-axios.delete("http://localhost:3000/api/notes/"+noteId)
-.then(res=>{
-  console.log(res.data);
-  fetchNotes()
-})
+axios
+  .delete("https://cohort2-0-xsn5.onrender.com//api/notes/" + noteId)
+  .then((res) => {
+    console.log(res.data);
+    fetchNotes();
+  });
 
 }
   return (
