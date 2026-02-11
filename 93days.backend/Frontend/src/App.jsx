@@ -13,7 +13,7 @@ function fetchNotes(){
 }
 
 useEffect(()=>{
-  fetchNotes();
+  fetchNotes()
 }, [])
 
 function handleSubmit(e){
