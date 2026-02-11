@@ -43,7 +43,7 @@ axios
 }
   return (
     <>
-      <form className="flex gap-4 px-12 py-4" onSubmit={handleSubmit}>
+      <form className="flex gap-5 px-12 py-4" onSubmit={handleSubmit}>
         <input name='title' type="text" placeholder="Enter title" />
         <input name='description' type="text" placeholder="Enter description" />
         <button>Create</button>
