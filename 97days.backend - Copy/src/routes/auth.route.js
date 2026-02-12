@@ -100,7 +100,7 @@ authRouter.post("/login", async (req, res) => {
  res.cookie("jwt_token", token)
 
  res.status(200).json({
-   message: "user logged in port 3000",
+   message: "user logged in port 3000 sagnik",
    user
  })
 })
