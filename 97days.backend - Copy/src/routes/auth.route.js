@@ -38,32 +38,7 @@ res.cookie("jwt_token",token)
  })
 })
 
-// authRouter.post("/login", async (req, res) => {
-//   const { email, password } = req.body;
 
-<<<<<<< HEAD
-//   const user = await userModel.findOne({ email });
-
-//   if (!user) {
-//     return res.status(404).json({ message: "user not found" });
-//   }
-
-//   const isPasswordMatched =
-//     user.password === crypto.createHash("md5").update(password).digest("hex");
-
-//   if (!isPasswordMatched) {
-//     return res.status(401).json({ message: "invalid password" });
-//   }
-
-//   const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
-
-//   res.cookie("jwt_token", token);
-
-//   res.status(200).json({
-//     message: "user logged in",
-//     user,
-//   });
-// });
 
 authRouter.post("/login", async (req, res) => {
   const { email, password } = req.body;
@@ -99,51 +74,4 @@ authRouter.post("/login", async (req, res) => {
     user,
   });
 });
-=======
-authRouter.post("/login", async (req, res) => {
 
- const { email, password } = req.body
-
- const user = await userModel.findOne({ email })
-
- if (!user) {
-   return res.status(404).json({ message: "user not found" })
- }
-
- const isPasswordMatched =
-   user.password === crypto.createHash("md5").update(password).digest("hex")
-
- if (!isPasswordMatched) {
-   return res.status(401).json({ message: "invalid password" })
- }
-
- const token = jwt.sign(
-   { id: user._id },
-   process.env.JWT_SECRET
- )
-
- res.cookie("jwt_token", token)
-
- res.status(200).json({
-   message: "user logged in",
-   user
- })
-})
-
-// authRouter.post("/login",async(req,res)=>{
-//  const {email,password} =  req.body
-//  const user = await userModel.findOne({email})
->>>>>>> cf6c2814d30a032e3954dbfe4e20956e48c66264
-
-
-
-<<<<<<< HEAD
-module.exports = authRouter
-=======
-// res.status(200).json({
-//  message: "user logged in",
-//  user
-// })
-// })
-module.exports = authRouter
->>>>>>> cf6c2814d30a032e3954dbfe4e20956e48c66264
