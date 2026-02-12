@@ -74,6 +74,7 @@ authRouter.post("/login", async (req, res) => {
     user,
   });
 });
+<<<<<<< HEAD:98days.backend/src/routes/auth.route.js
 
 authRouter.post("/login", async (req, res) => {
 
@@ -107,3 +108,7 @@ authRouter.post("/login", async (req, res) => {
 // sagnik
 
 module.exports = authRouter
+=======
+module.exports = authRouter
+
+>>>>>>> d162126e075f437b82470827ce10ccb8244b3524:97days.backend - Copy/src/routes/auth.route.js
