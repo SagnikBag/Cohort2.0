@@ -8,6 +8,7 @@ app.use(express.json())
 app.use(cookieparser())
 
 
+
 app.use("/api/auth",authRouter)
 
 app.use("/api/post", postRouter);
