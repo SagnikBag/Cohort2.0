@@ -41,6 +41,7 @@ res.cookie("token",token)
 
 res.status(201).json({
  message:"User Register successfuly",
+ user
  
 })
 }
