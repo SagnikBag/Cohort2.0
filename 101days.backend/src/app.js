@@ -10,6 +10,7 @@ app.use(cookieparser())
 
 
 app.use("/api/auth",authRouter)
+app.use("/api/post", postRouter)
 
-app.use("/api/post", postRouter);
+
 module.exports = app

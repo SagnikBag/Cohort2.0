@@ -1,8 +1,7 @@
-const postModel = require("../models/post.model")
+ const postModel = require("../models/post.model")
 const Imagekit =  require("@imagekit/nodejs")
 const {toFile} = require("@imagekit/nodejs")
 const jwt = require("jsonwebtoken");
-const { post } = require("../route/auth.route");
 
 
 
@@ -13,25 +12,6 @@ const imagekit = new Imagekit({
 async function createPostController(req,res){
  console.log(req.body,req.file);
 
- const token = req.cookies.token
-
-if(!token){
- return res.status(401).json({
-  message:"Token not provided, Unauthorized access"
- })
-}
-let decoded;
-try{
-  decoded = jwt.verify(token,process.env.JWT_SECRET)
-
-}
-catch{
- return res.status(401).json({
-  message:"user not authorized"
- })
-}
-
-console.log(decoded);
 
 
  const file = await imagekit.files.upload({
@@ -45,7 +25,7 @@ console.log(decoded);
  const post = await postModel.create({
   caption:req.body.caption,
   imgUrl:file.url,
-  user:decoded.id
+  user:req.user.id
  })
 
  res.status(201).json({
@@ -56,25 +36,9 @@ console.log(decoded);
 }
 
 async function getPostController(req,res){
- const token =  req.cookies.token
+ 
+  const userId = req.user.id
 
-
- if (!token) {
-   return res.status(401).json({
-     message: "Unauthoried Access",
-   });
- }
- let decoded;
-try{
-   decoded = jwt.verify(token,process.env.JWT_SECRET)
-
-}catch(err){
-  return res.status(401).json({
-    message:"Token invalid"
-  })
-}
-
-const userId = decoded.id
 const posts = await postModel.find({
   user:userId
 })
@@ -84,35 +48,34 @@ res.status(200).json({
 })
 }
 
-async function getPOstDetails(req,res){
-  const token = req.cookies.token
-
-  if(!token){
-    return res.status(401).json({
-      message:"Unauthoried Access"
-    })
-  }
-  let decoded
-  try{
-
-  }catch(err){
-    res.status(401).json({
-      message:"Invalid Token"
-    })
-  }
-  const userId =decoded.id
+async function getPostDetailsController(req,res){
+  
+  const userId = req.user.id
   const postId = req.params.postId
 
   const post = await postModel.findById(postId)
 
 
-  if(post){
+  if(!post){
     return res.status(404).json({
-      message: 'Post not foundd'
+      message: 'Post not found'
     })
   }
+
+  const isValidate = post.user.toString() === userId
+
+  if(!isValidate){
+    return res.status(403).json({
+      message:"Forbidden Content"
+    })
+  }
+
+  return res.status(200).json({
+    message:"Post fetched Successfully"
+  })
 }
 module.exports = {
- createPostController,
- getPostController
-}
+  createPostController,
+  getPostController,
+  getPostDetailsController
+};
