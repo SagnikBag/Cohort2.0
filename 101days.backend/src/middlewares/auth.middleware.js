@@ -17,7 +17,7 @@ async function identyfyUser(req,res,next){
    });
  }
  
- req.useer = decoded 
+ req.user = decoded 
  next()
  
 }
