@@ -5,10 +5,10 @@ import Register from './features/auth/pages/Register'
  export const routes = BrowserRouter([
  {
   path:'/login',
-  element:<Login/>
+  element:(<Login/>)
  },
  {
   path:'/register',
-  element:<Register/>
+  element:(<Register/>)
  }
 ])
