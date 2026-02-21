@@ -6,6 +6,7 @@ import Register from './features/auth/pages/Register'
   return (
    <BrowserRouter>
     <Routes>
+     <Route path='/' element ={<h1>Welcome to the Instagram</h1>}></Route>
      <Route path ='/login' element={<Login/>} />
      <Route path ='/register' element = {<Register/>}/>
     </Routes>

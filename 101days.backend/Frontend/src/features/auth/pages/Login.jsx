@@ -2,11 +2,15 @@ import React,{useState} from 'react'
 import '../style/form.scss'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import { useAuth } from '../hooks/useAuth' 
 
 const Login = () => {
 
   const [password, setPassword] = useState("")
   const [username, setUsername] = useState("")
+  const {handleLogin} = useAuth()
+
+
 
 function handleSubmit(e){
   e.preventDefault()
