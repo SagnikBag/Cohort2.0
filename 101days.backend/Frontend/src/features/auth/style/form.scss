@@ -1,38 +1,22 @@
+@mixin flex-colomn($gap:0rem){
+ display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
 main{
- min-height: 100vh;
- width:100%;
+ min-height:100vh;
+ width: 100%;
  display: flex;
  justify-content: center;
  align-items: center;
-}
-
-.form-container{
- height: fit-content;
- min-width: 400px;
- display: flex;
- flex-direction: column;
- gap: 1.5rem;
-
-   form{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    input,button{
-     border: none;
-     outline: none;
-     padding-inline: 1.5rem;
-     padding-block: 1rem;
-     border-radius: 1rem;
-    }
-    button{
-     background-color: #bd3030;
-     color: white;
-     cursor: pointer;
-    }
-   }
-   .toggleAuthForm{
-    color: aqua;
-    text-decoration: none;
-   }
+ .form-container{
+   @include flex-colomn(1rem);
+  
+  min-width: 350px;
+ }
+ form{
+  @include flex-colomn(1rem);
+ }
 }
