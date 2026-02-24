@@ -7,9 +7,9 @@ const identyfyUser = require("../middlewares/auth.middleware")
 
  // post /api/auth/register
 
- authRouter.post('/register', identyfyUser,authController.registerController)
+ authRouter.post('/register',authController.registerController)
  // post /api/auth/login
- authRouter.post('/login',identyfyUser,authController.loginController )
+ authRouter.post('/login',authController.loginController )
 
  authRouter.get('/get-me',identyfyUser,authController.getMeController)
 

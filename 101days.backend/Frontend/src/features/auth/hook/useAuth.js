@@ -9,10 +9,8 @@ export const useAuth =()=>{
 
   const handleLogin =async (username,password)=>{
     setLoading(true)
-
     const response = await login(username,password)
     setUser(response.user)
-
     setLoading(false)
   }
 

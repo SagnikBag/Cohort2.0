@@ -14,17 +14,13 @@ const Login = () => {
   const navigate = useNavigate()
   const handleSubmit = async (e)=>{
     e.preventDefault()
-
+    navigate("/");
     await handleLogin(username,password)
 
-   console.log("user loggedIn");
+   
    
     
   }
-  
-  
-
-
   return (
     <main>
       <div className="form-contaniner">
