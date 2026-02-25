@@ -99,7 +99,7 @@ async function likepostController(req,res){
   })
 }
 async function getFeedController(req,res){
-   const posts = await postModel.find().populate("user").select("-user.pasword")
+   const posts = await postModel.find().populate("user")
 
    res.status(200).json({
     message:"Posts fetched successfully",
