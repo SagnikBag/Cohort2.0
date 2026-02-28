@@ -1,4 +1,4 @@
-import  {getFeed,createPost} from "../services/post.api"
+import  {getFeed,createPost,likePost,unlikepost} from "../services/post.api"
 import { useContext, useEffect } from "react"
 import {PostContext} from "../post.context"
 
@@ -16,18 +16,31 @@ export const usePost = () =>{
    setLoading(false)
   }
 
-  const handleCreatePost = async(imageFie,caption)=>{
+  const handleCreatePost = async(imageFile,caption)=>{
     setLoading(true)
-    const data = await createPost(imageFie,caption)
+    const data = await createPost(imageFile,caption)
     setFeed([data.post,...feed])
     setLoading(false)
 
+  }
+
+  const handleLike = async (post)=>{
+    
+    const data = await likePost(post)
+    await handleGetFeed()
+    
+  }
+  const handleunlike  = async(post)=>{
+    
+    const data = await unlikepost(post)
+    await handleGetFeed()
+   
   }
   useEffect(()=>{
     handleGetFeed()
   },[])
 
   return{
-   loading,feed,post,handleGetFeed,handleCreatePost
+   loading,feed,post,handleGetFeed,handleCreatePost,handleLike,handleunlike
   }
 }
