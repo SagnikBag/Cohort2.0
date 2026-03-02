@@ -11,7 +11,7 @@ const Feed = () => {
     feed,
     post,
     handleGetFeed,
-    handleCreatePost,
+    
     handleLike,
     handleunlike,
   } = usePost();
