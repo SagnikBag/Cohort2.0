@@ -44,7 +44,7 @@ const posts = await postModel.find({
   user:userId
 })
 res.status(200).json({
-  message:"Posts fetched Successfully",
+  message:"Post fetched successfully",
   posts
 })
 }
@@ -72,12 +72,12 @@ async function getPostDetailsController(req,res){
   }
 
   return res.status(200).json({
-    message:"Post fetched Successfully"
+    message:"Post fetched successfully "
   })
 }
 
 async function likepostController(req,res){
-  const username  =req.user.username
+  const username  = req.user.id
   const postId =req.params.postId
 
   const post = await postModel.findById(postId)
