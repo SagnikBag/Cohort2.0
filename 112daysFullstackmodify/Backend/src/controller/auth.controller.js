@@ -87,10 +87,18 @@ return res.status(200).json({
  }
 })
 }
+async function getMe(req,res){
+ const user = await userModel.findById(req,user.id)
+
+ res.status(200).json({
+  mesage:"User fetched successfully",
+  user
+ })
+}
 
 
 
 
 module.exports = {
- registerUser,loginUser
+ registerUser,loginUser,getMe
 }
