@@ -9,6 +9,18 @@ async function authUser(req,res,next){
    message:"Token not provided"
   })
  }
+
+ const isTokenBlackListed = await blacklistModel.findOne({
+  token
+ })
+ 
+ if(isTokenBlackListed){
+   return res.status(401).json({
+    message:"Invalid token"
+   })
+ }
+
+
 try{
  const decoded = jwt.verify(
   token,
@@ -24,4 +36,4 @@ catch(err){
 }
  
 }
-module.exports =authUser
+module.exports = {authUser}
