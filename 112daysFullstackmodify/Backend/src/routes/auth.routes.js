@@ -14,7 +14,7 @@ router.post('/login',authController.loginUser)
 
 router.get('/get-me',authMiddleware.authUser,authController.getMe)
 
-router.get('/logout',  authController.logoutUser);
+router.get('/logout',authController.logoutUser);
 
 
 

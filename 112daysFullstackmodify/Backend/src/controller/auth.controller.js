@@ -48,7 +48,7 @@ async function registerUser(req,res){
 }
 async function loginUser(req,res){
  console.log(req.body);
- const {email,password,username} = req.body;
+ const {email,password} = req.body;
 
 
  const user = await userModel.findOne({

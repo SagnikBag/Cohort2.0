@@ -8,8 +8,8 @@ import {useNavigate} from 'react-router'
 const Login = () => {
 
 const {loading,handleLogin} = useAuth()
-const [email, setEmail] = useState(null)
-const [password, setPassword] = useState(null)
+const [email, setEmail] = useState("")
+const [password, setPassword] = useState("")
 
 const navigate = useNavigate()
 async function handleSubmit(e){
