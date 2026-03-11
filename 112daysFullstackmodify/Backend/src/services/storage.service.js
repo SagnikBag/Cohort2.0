@@ -14,4 +14,4 @@ async function uploadFile({buffer,filename,folder = ""}){
  return file
 }
  
- mmodule.exports = {uploadFile}
+ module.exports = {uploadFile}

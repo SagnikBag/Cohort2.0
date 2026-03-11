@@ -1,5 +1,5 @@
 // const Redis = require("ioredis").default
-const Redis = require("ioredis");
+const Redis = require("ioredis").default;
 
 const redis = new Redis({
  host:process.env.REDIS_HOST,
