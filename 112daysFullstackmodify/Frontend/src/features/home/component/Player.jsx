@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect, useContext } from "react";
-import { SongContext } from "../song.context";
+import { songContext } from "../song.context";
 import { useSong } from "../hooks/useSong";
 import "./player.scss";
 

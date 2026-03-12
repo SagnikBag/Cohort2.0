@@ -4,10 +4,11 @@ import Player from '../component/Player'
 import {useSong} from '../hooks/useSong'
  
 const Home  = () => {
+
+  const { handleGetSong } = useSong();
   return (
     <>
-      <FaceExpression 
-      onClick={(expression) => {handleGetSong({mood: expression})}}/>
+      <FaceExpression onClick={(expression) => handleGetSong(expression)} />
       <Player />
     </>
   );

@@ -4,12 +4,16 @@ import { songContext } from "../song.context";
 
 
 
-const useSong = ({}) =>{
- const context = useContext()
+ export const useSong = () =>{
+ const context = useContext(songContext)
 
+
+ if(!context){
+  throw new Error("useSong must be used inside SongContextProvider")
+ }
  const {loading,setLoading,song,setSong} = context 
 
- async function handleGetSong({}){
+ async function handleGetSong(mood){
   setLoading(true)
   const data = await getSong({mood})
   setSong(data.song)

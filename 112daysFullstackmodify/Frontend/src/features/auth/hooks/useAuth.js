@@ -8,7 +8,7 @@ export const useAuth = ()=>{
  const {user,setUser,loading,setLoading} =  context
 
 
- async function handleRegister(username,email,password){
+ async function handleRegister({username,email,password}){
   setLoading(true)
   const data = await register({username,email,password})
   setUser(data.user)
@@ -25,7 +25,7 @@ export const useAuth = ()=>{
  async function handleGetMe(){
   setLoading(true)
   const data = await getMe()
-  setUser(data.use)
+  setUser(data.user)
   setLoading(false)
  }
 

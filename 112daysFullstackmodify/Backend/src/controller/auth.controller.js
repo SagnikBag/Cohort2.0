@@ -6,6 +6,7 @@ const redis = require("../config/cashe")
 
 async function registerUser(req,res){
  const {username,email,password} = req.body
+console.log(req.body);
 
  const isAlreadyRegister = await userModel.findOne({
   $or:[

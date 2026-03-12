@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export const songContext = createContext()
 
-export const songContextProvider = ({children}) =>{
+export const SongContextProvider = ({children}) =>{
 
  const [song, setSong] = useState({
   
@@ -17,8 +17,8 @@ export const songContextProvider = ({children}) =>{
  const [loading,setLoading] = useState(false)
 
  return(
-  <songContextProvider value = {{loading,setLoading,song,setSong}}>
-{children}
-  </songContextProvider>
+  <songContext.Provider value = {{loading,setLoading,song,setSong}}>
+      {children}
+  </songContext.Provider>
  )
 }
