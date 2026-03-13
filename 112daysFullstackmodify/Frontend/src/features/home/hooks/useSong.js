@@ -1,11 +1,11 @@
 import { getSong } from "../service/song.api";
 import { useContext } from "react";
-import { songContext } from "../song.context";
+import {SongContext } from "../song.context";
 
 
 
  export const useSong = () =>{
- const context = useContext(songContext)
+ const context = useContext(SongContext)
 
 
  if(!context){

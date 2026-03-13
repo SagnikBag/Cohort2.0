@@ -83,7 +83,12 @@ const token = jwt.sign(
  }
 )
 
-res.cookie("token",token)
+// res.cookie("token",token)
+res.cookie("token", token, {
+  httpOnly: true,
+  secure: false, // true only in production (HTTPS)
+  sameSite: "lax", // important for cross-origin
+});
 
 return res.status(200).json({
  message:"user Logged in successfully",
