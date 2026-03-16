@@ -15,7 +15,7 @@ const navigate = useNavigate()
 async function handleSubmit(e){
   e.preventDefault()
   await handleLogin({email,password})
- navigate('/')
+ navigate('/dashboard')
 }
 
   return (

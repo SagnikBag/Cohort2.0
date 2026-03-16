@@ -12,7 +12,7 @@ if(loading){
  return <h1>Loading...</h1>
 }
 if (!loading && !user) {
-  return <Navigate to="/login"/>
+  return <Navigate to="/register"/>
 }
 
   return children
