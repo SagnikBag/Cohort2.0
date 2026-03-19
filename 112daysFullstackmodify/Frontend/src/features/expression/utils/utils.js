@@ -22,6 +22,8 @@ export const init = async ({ landmarkerRef, videoRef, streamRef }) => {
   await videoRef.current.play();
 };
 
+
+
 export const detect = ({ landmarkerRef, videoRef, setExpression }) => {
   if (!landmarkerRef.current || !videoRef.current) return;
 
@@ -60,3 +62,4 @@ export const detect = ({ landmarkerRef, videoRef, setExpression }) => {
     return currentExpression;
   }
 };
+
