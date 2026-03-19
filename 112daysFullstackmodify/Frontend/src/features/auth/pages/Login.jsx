@@ -30,7 +30,7 @@ async function handleSubmit(e){
            <FormGroup
            value = {password}
            onChange={(e)=>setPassword(e.target.value)}
-           label= "Password" placeholder="Enter your password"/>
+           label= "Password" placeholder="Enter Your Password"/>
           <button className='button' type='submit'>Login</button>
         </form>
           <p>Don't have an account? <Link to ="/register">Register</Link></p>
