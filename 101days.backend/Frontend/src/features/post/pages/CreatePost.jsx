@@ -43,7 +43,7 @@ async function handleSubmit(e){
          value={caption}
          onChange={(e)=>{setCaption(e.target.value)}}
         type="text" name='caption' id='caption' placeholder='Enter caption' />
-        <button className='button primary-button'>Create New Post</button>
+        <button className='button primary-button'>Create Post</button>
       </form>
      </div>
    </main>
