@@ -8,6 +8,9 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser)
 
-
+//api check
+app.get("/",(req,res)=>{
+ res.json({message:"Server is running"})
+})
 
 export default app;
