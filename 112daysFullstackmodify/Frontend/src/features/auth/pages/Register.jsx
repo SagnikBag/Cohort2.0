@@ -43,13 +43,14 @@ const Register = () => {
             onChange={(e) => setPassword(e.target.value)}
             label="Password"
             placeholder="Enter your password"
+            type="password"
           />
           <button className="button" type="submit">
             Register
           </button>
         </form>
         <p>
-          Already have an acoount. <Link to="/login">Login</Link>
+          Already have an account. <Link to="/login">Login</Link>
         </p>
       </div>
     </main>

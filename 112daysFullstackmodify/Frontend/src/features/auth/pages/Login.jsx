@@ -23,18 +23,27 @@ async function handleSubmit(e){
       <div className="form-container">
         <h1>Login</h1>
         <form onSubmit={handleSubmit}>
-           <FormGroup
-           value ={email}
-           onChange = {(e)=> setEmail(e.target.value)}
-           label= "Email" placeholder="Enter your email"/>
-           <FormGroup
-           value = {password}
-           onChange={(e)=>setPassword(e.target.value)}
-           label= "Password" placeholder="Enter Your Password"/>
-          <button className='button' type='submit'>Login</button>
+          <FormGroup
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            label="Email"
+            placeholder="Enter your email"
+          />
+          <FormGroup
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            label="Password"
+            placeholder="Enter Your Password"
+            type="password"
+          />
+
+          <button className="button" type="submit">
+            Login
+          </button>
         </form>
-          <p>Don't have an account? <Link to ="/register">Register</Link></p>
-        
+        <p>
+          Don't have an account? <Link to="/register">Register</Link>
+        </p>
       </div>
     </main>
   );
