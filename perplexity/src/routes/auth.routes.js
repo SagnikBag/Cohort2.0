@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { register } from "../controllers/auth.controller";
-import { registerValidator } from "../validators/auth.validator";
+import { register } from "../controllers/auth.controller.js";
+import { registerValidator } from "../validators/auth.validator.js";
 
 const authRouter = Router();
 
@@ -9,4 +9,6 @@ const authRouter = Router();
 // POST /api/auth/register
 // Request body: { username, email, password }
 // 
-authRouter.post("/reister",registerValidator,register);
+authRouter.post("/register",registerValidator,register);
+
+export default authRouter;

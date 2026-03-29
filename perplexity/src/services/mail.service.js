@@ -3,6 +3,7 @@ import nodemailer from "nodemailer";
 const transporter = nodemailer.createTransport({
  service:"gmail",
  auth:{
+  type:"OAuth2",
   user:process.env.GOOGLE_USER,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
   refreshToken: process.env.GOOGLE_REFRESH_TOKEN,
@@ -13,7 +14,7 @@ const transporter = nodemailer.createTransport({
 transporter.verify()
 .then(() =>{console.log("Email transporter is ready to send emails");
 })
-.catch(()=>{console.error("Email transporter verification failed");
+.catch((err)=>{console.error("Email transporter verification failed", err);
 })
 
 export async function sendEmail({to,subject,html,text}){
