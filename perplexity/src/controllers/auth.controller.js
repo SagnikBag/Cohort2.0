@@ -22,7 +22,7 @@ export async function register(req,res){
 
   await sendEmail({
     to: email,
-    subject : "Welcometo perplexity",
+    subject : "Welcome to perplexity",
     // text: `Hi ${username},\n\nThnak you for registering at perplexity,We're exited to have you on board!\n\nBest regards,\nThe Perplexity Team.`,
     html: `<p>Hi ${username},</p>
     <p>Thank you for registering at Perplexity, We're excited to have you on board!</p>
