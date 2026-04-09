@@ -1,6 +1,7 @@
 import userModel from "../models/user.model.js";
 import  jwt from "jsonwebtoken";
 import {sendEmail} from "../services/mail.service.js"
+import { getTestMessageUrl } from "nodemailer";
 
 export async function register(req,res){
 
@@ -109,7 +110,7 @@ export async function login(req,res){
     err:"Incorrect password"
 })
  }
- if(!user.verifued){
+ if(!user.verified){
   return res.status(400).json({
     message:"Please verify your email before logging in",
     success:false,
@@ -134,4 +135,21 @@ export async function login(req,res){
     email:user.email
   }
  })
+}
+export async function getMe(req,res){
+   const userId = req.user.id
+   const user  = await userModel.findById(userId).select("-password");
+  
+   if(!user){
+    return res.status(404).json({
+      message:"User not found",
+      success:false,
+      err:"User not found"
+    })
+   }
+   res.status(200).json({
+    message:"User found",
+    success:true,
+    user
+   })
 }
