@@ -10,7 +10,7 @@ testAi();
 
 connectToDb()
 .catch((err)=>{
- console.error("MongoDb connection failed:",err);
+ console.error("MongoDb connection failed error:",err);
  process.exit(1)
  
 })
