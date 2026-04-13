@@ -1,5 +1,8 @@
-import { log } from 'console';
+
 import readline  from 'readline';
+import { ChatMistralAI } from "@langchain/mistralai";
+import "dotenv/config"
+ 
 
 // Create interface for reading user input
 const rl = readline.createInterface({
@@ -7,7 +10,18 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-rl.question("what is your name?",(name)=>{
- console.log(`hello ${name}`);
- rl.close();
+
+const model = new ChatMistralAI({
+  model:"mistral-small-latest",
 })
+
+while(true){
+  const userInput = await rl.question("You: ");
+
+  const response = await model.invoke(userInput )
+  console.log(response.text);
+}
+
+
+
+rl.close()
