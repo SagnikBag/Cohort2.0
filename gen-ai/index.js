@@ -16,7 +16,7 @@ const model = new ChatMistralAI({
 })
 
 while(true){
-  const userInput = await rl.question("You: ");
+  const userInput = await rl.question("You : ");
 
   const response = await model.invoke(userInput )
   console.log(response.text);
