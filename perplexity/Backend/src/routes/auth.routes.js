@@ -18,4 +18,4 @@ authRouter.get("/get-me",authUser,getMe)
 
 authRouter.get('/verify-email', verifyEmail)
 
-export default authRouter;
+export default authRouter ;
