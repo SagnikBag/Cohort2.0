@@ -11,7 +11,7 @@ app.use(cookieParser())
 
 //api check
 app.get("/",(req,res)=>{
- res.json({message:"Server is running"})
+ res.json({message:"Server is running port 3000"})
 });
 
 app.use("/api/auth", authRouter);
