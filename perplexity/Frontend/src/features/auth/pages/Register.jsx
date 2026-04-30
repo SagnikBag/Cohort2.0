@@ -91,7 +91,7 @@ const Register = () => {
           </form>
 
           <p className="mt-6 text-center text-sm text-zinc-300">
-            Already have an account?{" "}
+            Already have an account ?{" "}
             <Link
               to="/login"
               className="font-semibold text-[#31b8c6] transition hover:text-[#45c7d4]"
