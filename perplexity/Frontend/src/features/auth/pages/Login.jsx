@@ -37,7 +37,7 @@ const Login = () => {
         <div className="w-full max-w-md rounded-2xl border border-[#31b8c6]/40 bg-zinc-900/70 p-8 shadow-2xl shadow-black/50 backdrop-blur">
           <h1 className="text-3xl font-bold text-[#31b8c6]">Welcome Back</h1>
           <p className="mt-2 text-sm text-zinc-300">
-            Sign in with your email and password.
+            Sign in withyyour email and password.
           </p>
 
           <form onSubmit={submitForm} className="mt-8 space-y-5">
