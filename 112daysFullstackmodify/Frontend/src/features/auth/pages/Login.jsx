@@ -42,7 +42,7 @@ async function handleSubmit(e){
           </button>
         </form>
         <p>
-          Don't have account? <Link to="/register">Register</Link>
+          Don't have a account? <Link to="/register">Register</Link>
         </p>
       </div>
     </main>
