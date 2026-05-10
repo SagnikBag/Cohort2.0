@@ -6,7 +6,7 @@ const model = new ChatGoogleGenerativeAI({
 });
 
 export async function testAi(){
- model.invoke("what is gen ai?")
+ model.invoke("what is mongodb?")
  .then((response) => {
   console.log(response.text);
  })

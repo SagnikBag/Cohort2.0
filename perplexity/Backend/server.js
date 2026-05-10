@@ -4,7 +4,8 @@ import connectToDb from "./src/config/database.js";
 import http from "http";
 import { testAi } from "./src/services/ai.service.js";
 import { initSocket } from "./src/sockets/server.socket.js";
-
+// import dns from "node:dns/promises";
+// dns.setServers(["1.1.1.1"]);
 const PORT = process.env.PORT || 3000;
 
 
