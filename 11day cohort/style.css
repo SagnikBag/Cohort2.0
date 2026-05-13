@@ -1,0 +1,39 @@
+@font-face {
+    font-family: f1;
+    src: url(./Another\ Danger\ -\ Demo.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    background-image: url(https://images.unsplash.com/photo-1684176949321-8d5827e03c45?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8M2QlMjBjYXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 60px;
+}
+h1{
+    font-size: 70px;
+    color: white;
+    font-family:f1;
+}
+button{
+    
+    font-size: 13px;
+    padding: 15px 30px;
+    color: white;
+    background-color: transparent;
+    border-radius: 5px;
+    font-weight: 500;
+}

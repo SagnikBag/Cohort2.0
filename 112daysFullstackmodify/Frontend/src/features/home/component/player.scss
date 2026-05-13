@@ -1,0 +1,190 @@
+// player.scss
+$primary: #1db954; // Spotify-esque green or choose your brand color
+$bg-player: rgba(25, 25, 25, 0.95);
+$text-main: #ffffff;
+$text-muted: #b3b3b3;
+
+.player {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: $bg-player;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  color: $text-main;
+  max-width: 400px;
+  width: 100%;
+  margin: 1rem auto;
+  font-family: 'Inter', -apple-system, sans-serif;
+
+  // Song Info Section
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__poster {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  &__meta {
+    overflow: hidden;
+    .player__title {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .player__mood {
+      font-size: 0.8rem;
+      color: $text-muted;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+
+  // Progress Bar
+  &__progress-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+  }
+
+  &__time {
+    font-size: 0.75rem;
+    min-width: 35px;
+    color: $text-muted;
+  }
+
+  &__progress {
+    position: relative;
+    flex: 1;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    cursor: pointer;
+    overflow: visible;
+
+    &:hover &-thumb {
+      opacity: 1;
+    }
+  }
+
+  &__progress-fill {
+    height: 100%;
+    background: $primary;
+    border-radius: 3px;
+    transition: width 0.1s linear;
+  }
+
+  &__progress-thumb {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  }
+
+  // Controls Layout
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    background: transparent;
+    border: none;
+    color: $text-main;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, color 0.2s;
+
+    &:hover {
+      color: $primary;
+      transform: scale(1.1);
+    }
+
+    &--play {
+      background: $text-main;
+      color: #000;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      &:hover {
+        background: $primary;
+        color: #fff;
+      }
+    }
+
+    &--speed {
+        font-weight: bold;
+        font-size: 0.8rem;
+        border: 1px solid rgba(255,255,255,0.2);
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+  }
+
+  // Speed Menu
+  &__speed-wrap {
+    position: relative;
+  }
+
+  &__speed-menu {
+    position: absolute;
+    bottom: 120%;
+    left: 0;
+    background: #282828;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    z-index: 10;
+  }
+
+  &__speed-option {
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    &:hover, &.active {
+      background: $primary;
+    }
+  }
+
+  // Volume
+  &__volume {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    input[type="range"] {
+      width: 60px;
+      accent-color: $primary;
+      cursor: pointer;
+    }
+  }
+}

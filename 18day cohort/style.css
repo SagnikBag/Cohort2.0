@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+html,body{
+    height: 100%;
+    width: 100%;
+   
+   
+}
+#main{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+   
+    grid-gap: 10px;
+   
+    border-radius: 10px;
+
+    grid-template-areas: "h1 h2 h3 h4"
+                        "h1 section section h4"
+                        "a1 section section a2"
+                        "a1 f1 f2 f2";
+}
+#h1{
+    background-color: aqua;
+    grid-area: h1;
+    border-radius: 10px;
+}
+#h2{
+    background-color: blueviolet;
+      grid-area: h2;
+}
+#h3{
+      grid-area: h3;
+    background-color: brown;
+}
+#h4{
+      grid-area: h4;
+    background-color: chartreuse;
+
+}
+#a1{
+      grid-area: a1;
+    background-color: yellowgreen;
+}
+section{
+      grid-area: section;
+    background-color: black;
+}
+#a2{
+      grid-area: a2;
+    background-color: tan;
+}
+#f1{
+      grid-area: f1;
+    background-color: pink;
+}
+#f2{
+      grid-area: f2;
+    background-color: navy;
+}
