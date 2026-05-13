@@ -34,7 +34,7 @@ async function handleSubmit(e){
             onChange={(e) => setPassword(e.target.value)}
             label="Password"
             placeholder="Enter Your Password"
-            type="password"
+            type="Password"
           />
 
           <button className="button" type="submit">
